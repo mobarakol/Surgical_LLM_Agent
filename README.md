@@ -3,6 +3,12 @@
 ## Abstract: 
 Image-guided surgery demands adaptive, real-time decision support, yet static AI models struggle with integrating surgical data and providing interactive guidance. Large vision-language models (VLMs) offer a promising solution by enabling dynamic task planning and predictive decision support. We introduce SurgicalVLM-Agent, an AI co-pilot for image-guided pituitary surgery, capable of planning, conversation, and task execution. The agent dynamically processes surgeon queries and plans the tasks such as instrument tracking, endoscope anatomy segmentation, MRI tumor segmentation, overlaying preoperative imaging with intraoperative views and surgical visual question answering (VQA). To enable structured task planning, we develop PitAgent-dataset, a surgical context-aware dataset covering phase recognition, instrument localization, tool tracking, segmentation, overlaying, tool-tissue interactions, and surgical activity recognition. Additionally, we propose FFT-GaLore, an FFT-based gradient projection technique for efficient low-rank adaptation, optimizing fine-tuning for LLaMA 3.2 in surgical environments. We validate SurgicalVLM-Agent by assessing task planning and prompt generation on our PitAgent dataset and evaluating zero-shot VQA using a public pituitary dataset. Results demonstrate state-of-the-art performance in task planning and query interpretation, with highly semantically meaningful VQA responses, advancing AI-driven surgical assistance.
 
+## PitAgent Dataset:
+Dataset will be released upon the paper acceptance
+
+## SurgicalVLM-Agent Pretrained Weights
+The pretrained weights will be releases upon the acceptance of the paper
+
 ## Training Command
 ```
 python main.py
