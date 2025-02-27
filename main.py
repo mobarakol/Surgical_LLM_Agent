@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 from datasets import Dataset
 
 # Import related functions and classes from other files
-from model import load_model_and_tokenizer, Truncated_GaLoreAdamW
+from model import load_model_and_tokenizer, FFT_GaLoreAdamW
 from dataloader import process_qa_samples, preprocess_data, collate_fn
 from inference import save_best_model, validate
 
@@ -136,7 +136,7 @@ if __name__ == "__main__":
          'proj_type': args.proj_type}
     ]
     
-    optimizer = Truncated_GaLoreAdamW(param_groups, lr=args.lr, weight_decay=args.weight_decay)
+    optimizer = FFT_GaLoreAdamW(param_groups, lr=args.lr, weight_decay=args.weight_decay)
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
     
     # Read data and construct DataLoader
