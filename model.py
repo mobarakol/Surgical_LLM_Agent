@@ -120,7 +120,7 @@ class GaLoreProjectorTensor:
         return tenalg.multi_mode_dot(x, factors)
 
 # Custom optimizer
-class Truncated_GaLoreAdamW(torch.optim.Optimizer):
+class FFT_GaLoreAdamW(torch.optim.Optimizer):
     def __init__(
         self,
         params,
