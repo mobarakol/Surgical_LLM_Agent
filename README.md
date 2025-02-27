@@ -14,3 +14,4 @@ python inference.py
 ```
 
 ## Acknowlwdgement
+The implementation of SurgicalVLM-Agent relies on resources from <a href="https://github.com/jiaweizzhao/GaLore">GaLore</a>, <a href="https://github.com/huggingface/transformers">Huggingface Transformers</a>, <a href="https://github.com/huggingface/peft">PEFT</a>. We thank the original authors for their open-sourcing.
