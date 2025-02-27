@@ -8,9 +8,9 @@ Image-guided surgery demands adaptive, real-time decision support, yet static AI
 python main.py
 ```
 
-##Inference Command
+## Inference Command
 ```
 python inference.py
 ```
 
-##Acknowlwdgement
+## Acknowlwdgement
