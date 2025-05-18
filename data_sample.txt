@@ -1,0 +1,65 @@
+Query: Visualize critical landmarks to avoid during nasal corridor entry?
+Response:
+Model: Segment-Video
+Prompt: Segment the Sella, Left Carotid, and Right Carotid?
+
+Query: I need to avoid vascular structures during dissection. What should I visualize?
+Response: 
+Model: Segment-Video
+Prompt: Segment the Left Carotid and Right Carotid arteries?
+
+Query: Help me to assess tumor margins for resection planning?
+Response:
+Model: Segment-MRI
+Prompt: Segment the Pituitary Adenoma and its boundaries?
+
+Query: Is the Internal Carotid Artery compressed by the tumor?
+Response:
+Model: Segment-MRI
+Prompt: Segment the Pituitary Adenoma and Internal Carotid Artery.
+
+Query: Show me regions where I should avoid drilling while I remove the sellar floor.
+Response: 
+Step1: Model: Segment-Video
+Prompt: Segment the left and right internal carotid arteries and the optic nerves in the current endoscopic frame.
+Step2: Model: Overlaying
+Prompt: Overlay a ‘no-drill’ mask that extends 3 mm around the segmented ICAs and optic nerves.
+
+Query: Check if the planned surgical path avoids the internal carotid arteries effectively?
+Response:
+Step 1: Model: Segment-Video
+Prompt: Segment the internal carotid arteries from the surgical view?
+Step 2: Model: Overlaying
+Prompt: Overlay the segmented internal carotid arteries and planned surgical trajectory?
+
+Query: Show me the critical anatomical landmarks around the instrument I'm currently using to confirm I'm not near the internal carotid artery?
+Response:
+Step 1: Model: Detect-Instrument
+Prompt: Identify and localize the current surgical instrument?
+Step 2: Model: Overlaying
+Prompt: Overlay internal carotid artery around the detected instrument location?
+
+Query: Based on the MRI scans, can you confirm if my pituitary rongeurs are accurately positioned within the adenoma boundary?
+Response:
+Step 1: Model: Detect-Instrument
+Prompt: Locate the pituitary rongeurs?
+Step 2: Model: Segment-MRI
+Prompt: Segment the pituitary adenoma on the MRI image?
+
+Query: Estimate how many more bites with the Kerrisons I need before the clival recess is fully exposed—without getting too close to the left carotid.
+Response:
+Step1: Model: Detect-Instrument
+Prompt: Detect and track the Kerrisons rongeur tip?
+Step2: Model: Segment-Video
+Prompt: Segment the clival recess and the left carotid artery.
+Step3: Model: Visual-Question-Answering
+Prompt: Calculate remaining bony distance to complete exposure, and output estimated number of rongeur bites.
+
+Query: I'm currently using pituitary rongeurs; am I clearly within the adenoma margins based on preoperative imaging, and what anatomical structures are nearby?
+Response:
+Step 1: Model: Instrument Detection
+Prompt: Detect the location of the pituitary rongeurs?
+Step 2: Model: MRI Segmentation
+Prompt: Segment the pituitary adenoma from preoperative MRI?
+Step 3: Model: Overlaying
+Prompt: Overlay anatomical landmarks around the detected instrument?
