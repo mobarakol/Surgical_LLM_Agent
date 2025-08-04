@@ -16,17 +16,7 @@ python main.py `
     --train_file "C:\path\to\your\train.csv" `
     --val_file "C:\path\to\your\val.csv" `
     --save_path "C:\path\to\save\model" `
-    --num_epochs 10 `
-    --batch_size 6 `
-    --lr 3e-7 `
-    --rank 128 `
-    --update_proj_gap 50 `
-    --galore_scale 1.0 `
-    --proj_type "reverse_std" `
-    --max_length 512 `
-    --max_new_tokens 300 `
     --seed 50 `
-    --weight_decay 0.0 `
     --HF_TOKEN "hf_your_huggingface_access_token_here"
 ```
 
@@ -36,8 +26,6 @@ python inference.py `
     --best_model_path "C:\path\to\your\trained\model" `
     --input_files "test1.csv,test2.csv,test3.csv" `
     --output_dir "C:\results\inference_output" `
-    --batch_size 6 `
-    --model_type "llama" `
     --seed 50 `
     --HF_TOKEN "hf_your_huggingface_access_token_here"
 ```
