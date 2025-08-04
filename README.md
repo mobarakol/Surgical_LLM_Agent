@@ -24,7 +24,12 @@ python main.py `
 ```
 python inference.py `
     --best_model_path "C:\path\to\your\trained\model" `
-    --input_files "test1.csv,test2.csv,test3.csv" `
+    --input_files "Your_path_to_input_files/Surgical-VQA_V.csv," `
+        "Your_path_to_input_files/Segment-MRI_V.csv," `
+        "Your_path_to_input_files/Segment-Video_V.csv," `
+        "Your_path_to_input_files/Track-Instrument_V.csv," `
+        "Your_path_to_input_files/2-model_V.csv," `
+        "Your_path_to_input_files/3-model_V.csv", `
     --output_dir "path\to\your\inference_output" `
     --seed 50 `
     --HF_TOKEN "hf_your_huggingface_access_token_here"
