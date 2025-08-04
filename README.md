@@ -25,7 +25,7 @@ python main.py `
 python inference.py `
     --best_model_path "C:\path\to\your\trained\model" `
     --input_files "test1.csv,test2.csv,test3.csv" `
-    --output_dir "C:\results\inference_output" `
+    --output_dir "path\to\your\inference_output" `
     --seed 50 `
     --HF_TOKEN "hf_your_huggingface_access_token_here"
 ```
